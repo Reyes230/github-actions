@@ -1,0 +1,20 @@
+name: Mi primer workflow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # También permite ejecutarlo manualmente
+
+jobs:
+  saludar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Imprimir saludo
+        run: echo "¡Hola Mundo desde GitHub Actions! 🚀"
+
+      - name: Ver la fecha y hora actual
+        run: date
+
+      - name: Ver en qué sistema estoy corriendo
+        run: uname -a
